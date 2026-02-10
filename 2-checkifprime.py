@@ -1,3 +1,11 @@
+''' Complexity Analysis:
+    Brute force: Time Complexity: O(N), as we iterate from 1 to N performing constant-time operation for each iteration.
+                 Space Complexity : O(1), as the space used by the algorithm does not increase with the size of the input.
+    
+    Optimal: Time Complexity: O(sqrt(N)), as The loop iterates up to the square root of n performing constant time operations at each step.
+             Space Complexity : O(1), as the space complexity remains constant and independent of the input size. 
+             Only a fixed amount of memory is required to store the integer variables.
+'''
 from math import sqrt
 class Solution:
     def checkprimebrute(self,n):

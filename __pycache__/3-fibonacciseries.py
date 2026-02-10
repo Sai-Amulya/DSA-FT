@@ -1,3 +1,13 @@
+''' Complexity analysis: (Time-->Space)
+Bruteforce: O(n) + O(n) # as two loops to calculate and print  & O(n) # for storing all elements
+
+Better: O(n) # one loop & O(1)
+
+Optimal: O(2^N) # for N=4, involves two function calls for each iteration which further expands to 4 function calls 
+and so on which makes worst-case time complexity to be exponential in nature
+& O(N) # At maximum there could be N function calls waiting in the recursion stack since we need to calculate 
+the Nth Fibonacci number for which we also need to calculate (N-1) Fibonacci numbers before it
+'''
 def main():
     n = int(input())
     fib = [0] * (n+1)
