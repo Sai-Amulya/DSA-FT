@@ -5,7 +5,7 @@ def main():
         print("Fibonacci series till 0th term is:")
         print(0)
     elif n == 1:
-        print("Fibonacci seried till 1st term is:")
+        print("Fibonacci series till 1st term is:")
         print("0 1")
     else:
         fib[0] = 0
@@ -31,11 +31,23 @@ def fibonaccibetter():
             beforelast = last
             last = num
             print(num, end=" ")
+            if i == n:
+                print()         # To move to next line in the end 
             
+def fibonacciopti(n):   # return just the nth term instead of series
+    if n <= 1:
+        return n
+    else:
+        last = fibonacciopti(n-1)
+        beforelast = fibonacciopti(n-2)
+
+        return last + beforelast
 
               
 if __name__ == "__main__":
-    main()
+    main()                      # better to take input once and pass it to functions.
     fibonaccibetter()
+    n = int(input())        # cant take input inside a recursive function
+    print(fibonacciopti(n)) # you have to print as the function is only returning
 
 
