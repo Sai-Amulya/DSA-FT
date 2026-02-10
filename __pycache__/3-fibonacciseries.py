@@ -15,7 +15,27 @@ def main():
         print(f"Fibonacci series till {n}th term is:")
         print(" ".join(str(num) for num in fib))
 
+def fibonaccibetter():
+    n = int(input())
+    if n==0:
+        print(f"Fibonacci series till {n}th term is: ")
+        print(0)
+    else:
+        beforelast = 0
+        last = 1
+        print(f"Fibonacci series for {n}th term is: ")
+        print(f"{beforelast} {last}", end = " ")
+
+        for i in range(2,(n+1)):
+            num = last + beforelast
+            beforelast = last
+            last = num
+            print(num, end=" ")
+            
+
+              
 if __name__ == "__main__":
     main()
+    fibonaccibetter()
 
 
